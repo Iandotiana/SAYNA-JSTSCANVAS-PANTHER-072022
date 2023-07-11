@@ -1,0 +1,451 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image:url('../Illustrations + Logo/All pages/arrière_plan.png');
+    
+    color: white;
+}
+/* .conteneur
+{
+    
+} */
+
+@font-face {
+    font-family: 'panthera';
+    src: url('../Fonts/PantheraRegular-MVZ9J.ttf');
+}
+@font-face{
+    font-family: 'beyno';
+    src: url('../Fonts/BEYNO.ttf');
+}
+@font-face{
+    font-family: 'wakanda';
+    src: url('../Fonts/WakandaForever-Regular.ttf');
+}
+@font-face{
+    font-family: 'cantarell';
+    src: url('../Fonts/Cantarell-Regular.ttf');
+}
+
+/* design du header */
+header
+{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+   
+}
+
+.logo
+{
+      flex-basis: 20%;
+      margin: 1% 0;
+}
+.logo a:hover
+{
+    filter: brightness(0) saturate(100%) invert(59%) sepia(23%) saturate(376%) hue-rotate(219deg) brightness(98%) contrast(85%);
+}
+nav
+{
+    flex-basis: 30%;
+}
+nav ul
+{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+}
+
+nav ul li
+{
+    list-style-type: none;
+}
+
+nav ul li a 
+{
+    text-decoration: none;
+    font-family: 'beyno';
+    color: #fff;
+    font-size: 22px;
+}
+nav ul li a:hover, nav ul li a:active
+{
+    color: #9E91B7;
+    text-decoration: underline;
+}
+
+
+/* design de l'illustration*/
+.illustration
+{
+    display: flex;
+    flex-direction: row;
+}
+.grand-titre
+{
+    font-family: 'beyno';
+    color: #9E91B7;
+    font-size: 58px;
+    margin-top: 5%;
+    
+}
+.description p
+{
+    position: relative;
+    top: -300px;
+    margin: 0 18% 0 15%;
+    text-align: justify;
+    font-family: 'cantarell';
+    font-size: 14px;
+}
+
+
+/* design de la partie de l'enigme  */
+section
+{
+    width: 80%;
+    margin: 10% 0 0 10%;
+}
+.enigme
+{
+    font-family: 'wakanda';
+    font-size: 43px;
+    color: #9E91B7;
+    width: 70%;
+}
+.enigme-titre
+{
+    font-family: 'beyno';
+    color: #9E91B7;
+    font-size: 24px;
+    margin-top: 5%;
+    text-decoration: underline;
+}
+.enigme-2, .enigme-enonce
+{
+    width: 50%;
+    font-family: 'cantarell';
+    margin-bottom: 5%;
+    text-align: justify;
+}
+.enigme-2 .solution div
+{
+    width: 90%;
+    text-align: justify;
+}
+.conteneur
+{
+    display: flex;
+    flex-direction: row;
+}
+.solution
+{
+    width: 70%;
+    font-family: 'cantarell';
+}
+
+.solution span
+{
+    font-family: 'wakanda';
+    padding-right: 2%;
+}
+
+.formulaire
+{
+    margin-top: 15%;
+}
+.formulaire p
+{
+    margin-bottom: 0;
+}
+input
+{
+   
+    width: 80%;
+    background-color: transparent;
+    padding: 2% ;
+    border:1px solid white;
+    border-radius: 30px;
+    padding: 3% 5%;
+}
+input::placeholder
+{
+    color: #fff;
+    padding-left: 3%;
+}
+.bouton
+{
+    background-color: #fff;
+    width: 40%;
+    border: 0;
+    font-weight: bold;
+    margin:15% 0 0 15% ;
+   
+}
+
+.description2
+{
+    margin-left: 10%;
+}
+
+
+.question
+{
+    position: relative;
+    top: -300px;
+    margin: 0 20% 10% 20%;
+    text-align: center;
+    font-family: 'cantarell';
+    font-size: 14px;
+}
+#enigme2, #enigme3 , #enigme1
+{
+    position: relative;
+}
+
+/* enigme 2 et 3 en display none  */
+#enigme2, #enigme3
+{
+    display: none;
+}
+
+
+/* design du footer */
+
+footer
+{
+    background: linear-gradient(180deg, #3D2DA6 0%, #021740
+    90.43%);
+    display: flex;
+    flex-direction: row;
+    font-family: 'cantarell';
+    padding: 10% 0% 5% 15%;
+
+}
+.superpose-img1:hover ,.superpose-img2:hover
+{
+    padding:-10%;
+}
+
+.superpose-img2
+{
+    position: relative;
+    top: -200px;
+    left: -240px;
+}
+
+.boite
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.grid3
+{
+    grid-column: 1/4;
+    font-size: 12px;
+}
+
+.grid1 ul
+{
+    padding: 0;
+}
+.grid1 ul li
+{
+    list-style-type: none;
+    
+}
+.grid1 ul li a
+{
+    text-decoration: none;
+    color: #fff;
+}
+.icon img
+{
+ padding-right: 1%;
+}
+.icon img
+{
+    transition: transform .1s ;
+}
+.icon img:hover
+{
+    transform: scale(1.3);
+}
+
+
+/* animation de fade in */
+section , main , aside {
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+
+
+/* la responsivité du site */
+
+@media screen and (max-width:768px)
+{
+
+   .bar1 , .bar2
+   {
+    display: none;
+   } 
+  /* header */
+  .logo
+  {
+    margin: 5% 3%;
+  }
+   .lg1
+   {
+    width:8px ;
+    height: 10px;
+   }
+   .lg2
+   {
+    width:4px ;
+    height: 4px;
+   }
+   .lg3
+   {
+    width:25px ;
+    height: 12px;
+   }
+   nav ul
+   {
+    flex-direction: column;
+   }
+
+   nav ul li a 
+{
+    font-size: 14px;
+}
+    /* section1 */
+    #section1
+    {
+        top: 0;
+        flex-direction: column-reverse;
+    }
+    .illustration1 img
+    {
+        width: 500px;
+    }
+    .description-titre
+{
+    font-size: 35px;
+}
+.description-sous-titre
+{
+    
+    font-size: 22px ;
+   
+}
+.description-texte, .description a
+{
+    font-size: 12px;
+}
+
+/* illustration */
+.illustration
+{
+    flex-direction: column;
+}
+.illustration img
+{
+    width: 250px;
+}
+.grand-titre
+{
+    font-size: 28px;
+    margin-left: 3%;
+}
+.description img 
+{
+    display: none;
+    
+}
+.description p
+{
+    position: static;
+    margin: 0 3%;
+    font-size: 12px;
+}
+
+
+/* enigme */
+section 
+{
+    margin-bottom: 8%;
+}
+.enigme
+{
+    width: auto;
+    font-size: 28px;
+}
+
+.conteneur
+{
+    flex-direction: column-reverse;
+}
+.solution
+{
+    width: auto;
+    font-size: 12px;
+}
+
+input::placeholder
+{
+    font-size: 12px;
+}
+
+.description2 img
+{
+    display: none;
+}
+
+.question
+{
+    position: static;
+    margin: 2% 5% 15% 5%;
+    font-size: 12px;
+}
+
+/* footer */
+
+.superpose
+{
+    display: none;
+}
+.boite
+{
+    display: flex;
+    flex-direction: column;
+}
+.grid1 ul li a 
+{
+    font-size: 12px;
+}
+.grid3
+{
+    margin-top: 5%;
+    font-size: 6px;
+}
+
+.icon a img  {
+    width: 30px;
+    height: 30px;
+}
+}
